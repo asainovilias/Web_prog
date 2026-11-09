@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru"> 
     <head> 
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>КиноАгрегатор</title> 
     </head> 
     <body> 
-        <nav>
-        <header>
-            <h1>КиноАгрегатор</h1>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог фильмов</a></li>
-                <li><a href="collection.html">Смотреть позже</a></li>
-                <li><a href="checkout.html">Оформить подписку</a></li>
-            </ul>
+        <header class="header">
+            <h1 class="header__name">КиноАгрегатор</h1>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="index.html">Главная</a></li>
+                    <li class="menu__item"><a href="catalog.html">Каталог фильмов</a></li>
+                    <li class="menu__item"><a href="collection.html">Смотреть позже</a></li>
+                    <li class="menu__item"><a href="checkout.html">Оформить подписку</a></li>
+                </ul>
+            </nav>
         </header>
-        </nav>
-        <main>
-            <h2>Лабараторная работа 1 по Web-программированию</h2>
-            <p>Крутой сайт по поиску фильмов</p>
-            <p>Самый красивый и многофункциональный сайт, точно точно</p>
-            <img src="Джокер.jpg" alt="Баннер сервиса(Джокер)">
-            <p>Джокер - символ сайта</p>
+        <main class="main">
+            <h2 class="main__name">Лабараторная работа 1 по Web-программированию</h2>
+            <p class="main__discription-site"> Крутой сайт по поиску фильмов</p>
+            <p class="main__discription-site">Самый красивый и многофункциональный сайт, точно точно</p>
+            <img class="main__picture-site" src="Джокер.jpg" alt="Баннер сервиса(Джокер)">
+            <p class="main__discription-picture">Джокер - символ сайта</p>
         </main>
-        <footer><p>Асаинов Ильяс</p></footer>
+        <footer class="footer"><p class="footer__text">Асаинов Ильяс</p></footer>
     </body> 
 </html> 
