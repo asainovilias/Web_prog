@@ -1,0 +1,29 @@
+// _variables.scss
+
+$font-main: "Segoe UI", "Roboto", Arial, sans-serif;
+
+$color-bg: #f4f6fb;
+$color-surface: #ffffff;
+$color-text: #1f2937;
+$color-muted: #6b7280;
+$color-dark: #111827;
+$color-primary: #d62828;
+$color-primary-dark: #a61e1e;
+$color-border: #d9dee8;
+$color-overlay: rgba(17, 24, 39, 0.78);
+
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 18px;
+
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+
+$shadow-sm: 0 2px 10px rgba(17, 24, 39, 0.08);
+$shadow-lg: 0 24px 70px rgba(17, 24, 39, 0.35);
+
+$container-width: 1120px;
+$transition: 0.25s ease;

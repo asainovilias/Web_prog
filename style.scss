@@ -1,0 +1,457 @@
+@use "variables" as *;
+
+// ===== Базовый сброс =====
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+// ===== Кнопка-компонент =====
+.form__button {
+  display: inline-block;
+  padding: $space-sm $space-lg;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: $color-primary;
+  border: 0;
+  border-radius: $radius-sm;
+  transition:
+    background-color $transition,
+    transform $transition,
+    box-shadow $transition;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    transform: translateY(-2px);
+    box-shadow: $shadow-sm;
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba($color-primary, 0.35);
+    outline-offset: 2px;
+  }
+}
+
+// Внешняя геометрия кнопки-триггера — БЭМ-микс
+.detail__trigger {
+  display: block;
+  margin: $space-md auto $space-lg;
+}
+
+// ===== Шапка =====
+.header {
+  padding: $space-md $space-lg;
+  color: #fff;
+  background-color: $color-dark;
+  border-bottom: 3px solid $color-primary;
+
+  &__name {
+    margin: 0 0 $space-md;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+}
+
+.menu {
+  &__list {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 $space-sm;
+  }
+
+  // В HTML у ссылок меню нет отдельных классов,
+  // поэтому здесь используется селектор по тегу.
+  &__item a {
+    display: inline-block;
+    padding: $space-sm $space-md;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: $radius-sm;
+    transition:
+      background-color $transition,
+      color $transition;
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background-color: $color-primary;
+      outline: none;
+    }
+  }
+}
+
+// ===== Основной контент =====
+.main {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: $space-xl $space-lg;
+
+  &__name {
+    margin: 0 0 $space-lg;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $color-dark;
+  }
+
+  &__discription-site {
+    margin: 0 0 $space-sm;
+    color: $color-muted;
+  }
+
+  &__picture-site {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin: $space-lg auto;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-sm;
+  }
+
+  &__discription-picture {
+    margin: 0 0 $space-lg;
+    color: $color-muted;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto $space-md;
+    object-fit: cover;
+    border-radius: $radius-md;
+  }
+
+  &__discription {
+    margin: 0 0 $space-md;
+    color: $color-muted;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__rticle {
+    margin: 0 0 $space-lg;
+    padding: $space-lg;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+  }
+
+  &__section {
+    margin-bottom: $space-lg;
+  }
+
+  &__records {
+    padding: $space-lg;
+    color: $color-muted;
+    line-height: 1.8;
+    background-color: $color-surface;
+    border-left: 4px solid $color-primary;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+  }
+
+  // ===== Форма подписки =====
+  &__tarif,
+  &__contact,
+  &__pay {
+    margin: 0 0 $space-lg;
+    padding: $space-lg;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+  }
+
+  &__plan-name,
+  &__contact-name,
+  &__pay-method {
+    padding: 0 $space-sm;
+    color: $color-dark;
+    font-weight: 700;
+  }
+
+  &__label-tarif,
+  &__label-email,
+  &__start-date,
+  &__label-card,
+  &__label-sbp,
+  &__label-auto {
+    display: block;
+    margin: 0 0 $space-sm;
+    color: $color-dark;
+    font-weight: 600;
+  }
+
+  &__plan,
+  &__input-email,
+  &__input-start-date {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 0 $space-md;
+    padding: $space-sm $space-md;
+    color: $color-text;
+    font: inherit;
+    background-color: #fff;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    transition:
+      border-color $transition,
+      box-shadow $transition;
+
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+  }
+
+  &__option {
+    color: $color-text;
+  }
+
+  &__input-card,
+  &__input-sbp,
+  &__input-auto {
+    margin-right: $space-sm;
+    accent-color: $color-primary;
+  }
+
+  &__confirm {
+    @extend .form__button;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// Опечатка в collection.html: mian__name
+.mian__name {
+  margin: 0 0 $space-lg;
+  font-size: 32px;
+  line-height: 1.2;
+  color: $color-dark;
+}
+
+// ===== Каталог =====
+.catalog {
+  &__name {
+    margin: 0 0 $space-lg;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $color-dark;
+  }
+}
+
+.movie-card {
+  margin: 0 0 $space-lg;
+  padding: $space-lg;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+
+  &__name {
+    margin: 0 0 $space-md;
+    font-size: 24px;
+    line-height: 1.25;
+    color: $color-dark;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto $space-md;
+    object-fit: cover;
+    border-radius: $radius-md;
+  }
+
+  &__description {
+    margin: 0 0 $space-md;
+    color: $color-muted;
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0 $space-sm $space-md 0;
+    padding: $space-sm $space-md;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $color-primary;
+    border-radius: $radius-sm;
+    transition:
+      background-color $transition,
+      transform $transition;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-primary-dark;
+      transform: translateY(-2px);
+      outline: none;
+    }
+  }
+}
+
+// ===== Таблица «Смотреть позже» =====
+.table {
+  width: 100%;
+  overflow: hidden;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-collapse: collapse;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+
+  &__head {
+    color: #fff;
+    background-color: $color-dark;
+  }
+
+  &__line {
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__item {
+    padding: $space-md;
+    color: inherit;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  &__head &__item {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &__body &__line:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  &__body &__line:hover {
+    background-color: rgba($color-primary, 0.06);
+  }
+}
+
+// ===== Подвал =====
+.footer {
+  padding: $space-md $space-lg;
+  color: #fff;
+  text-align: center;
+  background-color: $color-dark;
+
+  &__text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+  }
+}
+
+// ===== Модальное окно «Смотреть трейлер» =====
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: $space-lg;
+  background-color: $color-overlay;
+
+  &__dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - #{$space-lg * 2});
+    max-width: 900px;
+    padding: $space-lg;
+    background-color: $color-surface;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    transform: translate(-50%, -50%);
+  }
+
+  &__close {
+    position: absolute;
+    top: $space-sm;
+    right: $space-sm;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    background-color: $color-dark;
+    border: 0;
+    border-radius: 50%;
+    transition:
+      background-color $transition,
+      transform $transition;
+
+    &:hover {
+      background-color: $color-primary;
+      transform: rotate(90deg);
+    }
+
+    &:focus-visible {
+      outline: 3px solid rgba($color-primary, 0.35);
+      outline-offset: 2px;
+    }
+  }
+
+  &__title {
+    margin: 0 $space-xl $space-md 0;
+    color: $color-dark;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  &__player {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    background-color: #000;
+    border-radius: $radius-md;
+  }
+}
+
+// Показ модального окна.
+// В HTML кнопка — <button>, поэтому без JS модалка сама не откроется.
+// Можно добавить JS или использовать ссылку href="#trailer-modal".
+.modal:target,
+.modal_open {
+  display: block;
+}

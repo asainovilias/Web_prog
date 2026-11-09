@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>КиноАгрегатор</title> 
+    </head> 
+    <body> 
+        <nav>
+        <header>
+            <h1>КиноАгрегатор</h1>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог фильмов</a></li>
+                <li><a href="collection.html">Смотреть позже</a></li>
+                <li><a href="checkout.html">Оформить подписку</a></li>
+            </ul>
+        </header>
+        </nav>
+        <main>
+            <h2>Купить подписку</h2>
+            <fieldset>
+                <legend>Тарифный план</legend>
+                <label>Выберите тариф:</label>
+                <select id="plan" name="plan" required>
+                    <option value="">-- Выберите тариф --</option>
+                    <option value="basic">Базовый (1 экран, HD) — 299 ₽/мес</option>
+                    <option value="standard">Стандарт (2 экрана, Full HD) — 499 ₽/мес</option>
+                    <option value="premium">Премиум (4 экрана, 4K) — 799 ₽/мес</option>
+                </select>
+            </fieldset>
+             <fieldset>
+                <legend>Контактные данные</legend>
+                <label>Email:</label>
+                <input required placeholder="you@example.com">
+                <label for="start-date">Дата начала подписки:</label>
+                <input type="date" id="start-date" name="start_date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Способ оплаты</legend>
+                <label>
+                    <input type="radio" name="pay"> Банковская карта
+                </label>
+                <label>
+                    <input type="radio" name="pay"> СБП
+                </label>
+                <label>
+                    <input type="checkbox"> Автопродление подписки
+                </label>
+            </fieldset>
+            <button>Оформить подписку</button>
+        </main>
+        <footer><p>Асаинов Ильяс</p></footer>
+    </body> 
+</html> 
