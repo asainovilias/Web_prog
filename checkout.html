@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru"> 
     <head> 
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>КиноАгрегатор</title> 
     </head> 
     <body> 
-        <nav>
-        <header>
-            <h1>КиноАгрегатор</h1>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог фильмов</a></li>
-                <li><a href="collection.html">Смотреть позже</a></li>
-                <li><a href="checkout.html">Оформить подписку</a></li>
-            </ul>
+        <header class="header">
+            <h1 class="header__name">КиноАгрегатор</h1>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="index.html">Главная</a></li>
+                    <li class="menu__item"><a href="catalog.html">Каталог фильмов</a></li>
+                    <li class="menu__item"><a href="collection.html">Смотреть позже</a></li>
+                    <li class="menu__item"><a href="checkout.html">Оформить подписку</a></li>
+                </ul>
+            </nav>
         </header>
-        </nav>
-        <main>
-            <h2>Купить подписку</h2>
-            <fieldset>
-                <legend>Тарифный план</legend>
-                <label>Выберите тариф:</label>
-                <select id="plan" name="plan" required>
-                    <option value="">-- Выберите тариф --</option>
-                    <option value="basic">Базовый (1 экран, HD) — 299 ₽/мес</option>
-                    <option value="standard">Стандарт (2 экрана, Full HD) — 499 ₽/мес</option>
-                    <option value="premium">Премиум (4 экрана, 4K) — 799 ₽/мес</option>
+        <main class="main">
+            <h2 class="main__name">Купить подписку</h2>
+            <fieldset class="main__tarif">
+                <legend class="main__plan-name">Тарифный план</legend>
+                <label class="main__label-tarif">Выберите тариф:</label>
+                <select class="main__plan" id="plan" name="plan" required>
+                    <option class="main__option" value="">-- Выберите тариф --</option>
+                    <option class="main__option" value="basic">Базовый (1 экран, HD) — 299 ₽/мес</option>
+                    <option class="main__option" value="standard">Стандарт (2 экрана, Full HD) — 499 ₽/мес</option>
+                    <option class="main__option" value="premium">Премиум (4 экрана, 4K) — 799 ₽/мес</option>
                 </select>
             </fieldset>
-             <fieldset>
-                <legend>Контактные данные</legend>
-                <label>Email:</label>
-                <input required placeholder="you@example.com">
-                <label for="start-date">Дата начала подписки:</label>
-                <input type="date" id="start-date" name="start_date" required>
+             <fieldset class="main__contact">
+                <legend class="main__contact-name">Контактные данные</legend>
+                <label class="main__label-email">Email:</label>
+                <input class="main__input-email" required placeholder="you@example.com">
+                <label class="main__start-date" for="start-date">Дата начала подписки:</label>
+                <input class="main__input-start-date"type="date" id="start-date" name="start_date" required>
             </fieldset>
 
-            <fieldset>
-                <legend>Способ оплаты</legend>
-                <label>
-                    <input type="radio" name="pay"> Банковская карта
+            <fieldset class="main__pay">
+                <legend class="main__pay-method">Способ оплаты</legend>
+                <label class="main__label-card">
+                    <input class="main__input-card" type="radio" name="pay"> Банковская карта
                 </label>
-                <label>
-                    <input type="radio" name="pay"> СБП
+                <label class="main__label-sbp">
+                    <input class="main__input-sbp" type="radio" name="pay"> СБП
                 </label>
-                <label>
-                    <input type="checkbox"> Автопродление подписки
+                <label class="main__label-auto">
+                    <input class="main__input-auto" type="checkbox"> Автопродление подписки
                 </label>
             </fieldset>
-            <button>Оформить подписку</button>
+            <button class="main__confirm">Оформить подписку</button>
         </main>
-        <footer><p>Асаинов Ильяс</p></footer>
+        <footer class="footer"><p class="footer__text">Асаинов Ильяс</p></footer>
     </body> 
 </html> 
