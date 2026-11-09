@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru"> 
     <head> 
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>КиноАгрегатор</title> 
     </head> 
     <body> 
-        <nav>
-        <header>
-            <h1>КиноАгрегатор</h1>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог фильмов</a></li>
-                <li><a href="collection.html">Смотреть позже</a></li>
-                <li><a href="checkout.html">Оформить подписку</a></li>
-            </ul>
+        <header class="header">
+            <h1 class="header__name">КиноАгрегатор</h1>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="index.html">Главная</a></li>
+                    <li class="menu__item"><a href="catalog.html">Каталог фильмов</a></li>
+                    <li class="menu__item"><a href="collection.html">Смотреть позже</a></li>
+                    <li class="menu__item"><a href="checkout.html">Оформить подписку</a></li>
+                </ul>
+            </nav>
         </header>
-        </nav>
-        <main>
-            <h2>Джокер</h2>
-            <img src="Джокер.jpg" alt="Баннер сервиса(Джокер)">
-            <p>18+ 2019г. ‧ Криминал/Триллер ‧ 2 ч 2 мин</p>
-            <article>Готэм, начало 1980-х годов. Комик Артур Флек живет с больной матерью, которая с детства учит его 
+        <main class="main">
+            <h2 class="main__name">Джокер</h2>
+            <img class="main__picture" src="Джокер.jpg" alt="Баннер сервиса(Джокер)">
+            <p class="main__discription">18+ 2019г. ‧ Криминал/Триллер ‧ 2 ч 2 мин</p>
+            <article class="main__rticle">Готэм, начало 1980-х годов. Комик Артур Флек живет с больной матерью, которая с детства учит его 
                 «ходить с улыбкой». Пытаясь нести в мир хорошее и дарить людям радость, Артур сталкивается с человеческой
                  жестокостью и постепенно приходит к выводу, что этот мир получит от него не добрую улыбку, а ухмылку злодея Джокера.
             </article>
-            <section>
-                <article>
+            <section class="main__section">
+                <article class="main__records">
                     Год производства - 2019<br>
                         Страна - США, Канада, Австралия<br>
                         Жанр - драма, криминал, триллер<br>
@@ -50,7 +51,17 @@
                         Время - 2 ч 2 мин<br>
                 </article>
             </section>
+            <a href="#trailer-modal" class="form__button detail__trigger">Смотреть трейлер</a>
+            <div class="modal" id="trailer-modal">
+            <div class="modal__dialog">
+                <a href="#!" class="modal__close" aria-label="Закрыть">&times;</a>
+                <h3 class="modal__title">Трейлер — Джокер (2019)</h3>
+                <video class="modal__player" controls>
+                <source src="trailer.mp4" type="video/mp4">
+                </video>
+            </div>
+            </div>
         </main>
-        <footer><p>Асаинов Ильяс</p></footer>
+        <footer class="footer"><p class="footer__text">Асаинов Ильяс</p></footer>
     </body> 
 </html> 
