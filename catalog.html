@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru"> 
     <head> 
+        <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>КиноАгрегатор</title> 
     </head> 
     <body> 
-        <header>
-            <h1>КиноАгрегатор</h1>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог фильмов</a></li>
-                <li><a href="collection.html">Смотреть позже</a></li>
-                <li><a href="checkout.html">Оформить подписку</a></li>
-            </ul>
+        <header class="header">
+            <h1 class="header__name">КиноАгрегатор</h1>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="index.html">Главная</a></li>
+                    <li class="menu__item"><a href="catalog.html">Каталог фильмов</a></li>
+                    <li class="menu__item"><a href="collection.html">Смотреть позже</a></li>
+                    <li class="menu__item"><a href="checkout.html">Оформить подписку</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <h2>Каталог фильмов</h2>
-            <section>
-            <p>1. Джокер</p>
-            <img src="Джокер.jpg" alt="Баннер сервиса(Джокер)">
-            <p>18+ 2019г. ‧ Криминал/Триллер ‧ 2 ч 2 мин</p>
-            <a href="detail.html">перейти</a>
-            </section>
-            <section>
-            <p>2. Аватар</p>
-            <img src="Аватар.jpg" alt="Баннер сервиса(Джокер)">
-            <p>2009 г. ‧ Научная фантастика/Боевик ‧ 2 ч 42 мин</p>
-            <p>перейти</p>
-            </section>
-            <p>3. Майнкрафт</p>
-            <img src="Майнкрафт.jpg" alt="Баннер сервиса(Джокер)">
-            <p>2025 г. ‧ Приключения/Фэнтези ‧ 1 ч 41 мин</p>
-            <p>перейти</p>
-            <section>
-            <p>4. Титаник</p>
-            <img src="Титаник.jpg" alt="Баннер сервиса(Джокер)">
-            <p>12+ 1997 г. ‧ Романтика/Приключения ‧ 3 ч 14 мин</p>
-            <p>перейти</p>
+        <main class="main">
+            <section class="catalog">
+                <h2 class="catalog__name">Каталог фильмов</h2>
+                <div class="movie-card">
+                    <p class="movie-card__name">1. Джокер</p>
+                    <img src="Джокер.jpg" alt="Баннер сервиса(Джокер)" class="movie-card__picture">
+                    <p class="movie-card__description">18+ 2019г. ‧ Криминал/Триллер ‧ 2 ч 2 мин</p>
+                    <a href="detail.html" class="movie-card__link">перейти</a>
+
+                    <a href="#trailer-modal" class="form__button detail__trigger">Смотреть трейлер</a>
+
+                    <div class="modal" id="trailer-modal">
+                    <div class="modal__dialog">
+                        <a href="#!" class="modal__close" aria-label="Закрыть">&times;</a>
+                        <h3 class="modal__title">Трейлер — Джокер (2019)</h3>
+                        <video class="modal__player" controls>
+                        <source src="trailer.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <p class="movie-card__name">2. Аватар</p>
+                    <img src="Аватар.jpg" alt="Обложка фильма Аватар" class="movie-card__picture">
+                    <p class="movie-card__description">2009 г. ‧ Научная фантастика/Боевик ‧ 2 ч 42 мин</p>
+                    <p class="movie-card__link">перейти</p>
+                </div>
+                <div class="movie-card">
+                    <p class="movie-card__name">3. Майнкрафт</p>
+                    <img src="Майнкрафт.jpg" alt="Обложка фильма Майнкрафт)" class="movie-card__picture">
+                    <p class="movie-card__description">2025 г. ‧ Приключения/Фэнтези ‧ 1 ч 41 мин</p>
+                    <p class="movie-card__link">перейти</p>
+                </div>
+                <div class="movie-card">
+                    <p class="movie-card__name"> Титаник</p>
+                    <img src="Титаник.jpg" alt="Обложка фильма Титаник" class="movie-card__picture">
+                    <p class="movie-card__description">12+ 1997 г. ‧ Романтика/Приключения ‧ 3 ч 14 мин</p>
+                    <p class="movie-card__link">перейти</p>
+                </div>
             </section>
         </main>
-        <footer><p>Асаинов Ильяс</p></footer>
+        <footer class="footer"><p class="footer__text">Асаинов Ильяс</p></footer>
     </body> 
 </html> 
